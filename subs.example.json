@@ -1,0 +1,17 @@
+{
+    "preferredProto": "tcp",
+    "subslist": [{
+        "name": "备注名",
+        "url": "订阅地址",
+        "must-include": ["需要","包含的","节点名","关键字"],
+        "must-exclude": ["不可以","包含的","节点名","关键字"],
+        "choice": 5
+    }, {
+        "name": "TigerCloud",
+        "url": "https://panel.不打广告.yay/api/v1/client/subscribe?token=不告诉你",
+        "must-include": ["香港"],
+        "must-exclude": ["2倍"],
+        "choice": 3
+    }],
+    "outboundtag": "ProxyPool"
+}
