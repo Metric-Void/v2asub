@@ -11,6 +11,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "net-ping": "^1.2.3"
+    "archiver": "^5.2.0",
+    "net-ping": "^1.2.3",
+    "pkg": "^4.4.9"
   }
 }
