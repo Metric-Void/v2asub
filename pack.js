@@ -23,7 +23,9 @@ exec([ "." ]).then(function() {
         console.log(`Packing ${bin_name} to ${zip_name}`)
 
         const output = fs.createWriteStream(__dirname + zip_name);
-
+        if(!fs.existsSync(__dirname + zip_name)) {
+            fs.writeFileSync(__dirname + zip_name)
+        }
         const archive = archiver('zip', {
             zlib: { level: 9 } // Sets the compression level.
         });
