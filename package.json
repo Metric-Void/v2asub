@@ -1,8 +1,9 @@
 {
-  "name": "v2upd",
+  "name": "v2asub",
   "version": "1.0.0",
   "description": "v2 Configuration updater",
   "main": "index.js",
+  "bin": "index.js",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
