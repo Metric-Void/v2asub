@@ -59,7 +59,17 @@ config.subslist.forEach( i => {
 
             parseVmess(i, vmess_list)
         })
-    }).on('error', (e) => {
+    })
+
+    req.on('socket', (s) => {
+        s.setTimeout(5000, () => {
+            s.destroy(); 
+            console.log(`\x1b[31m ERRO |\x1b[0m ${i.name} Connection Timed Out.`);
+            reportCompletion(i, [], [])
+        })
+    });
+
+    req.on('error', (e) => {
         console.log(`\x1b[31m ERRO |\x1b[0m Failed to contact ${i.name}`);
         reportCompletion(i, [], [])
     });
